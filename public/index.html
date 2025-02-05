@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INM420 API Assignment</title>
+
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo and tag line -->
+        <section id="logo-slogan">
+            <img src="/assets/images/merriam-webster-logo.png" alt="Merriam Webster Dictionary Logo" id="logo">
+            <!-- div block for CSS styling -->
+            <div class="vert-line"></div>
+            <h1>America's Most Trusted Dictionary</h1>
+        </section>
+    </header>
+    <main>
+        <!-- Search bar and button -->
+        <section id="search">
+            <!-- When form is submited, do not reload page -->
+            <form id="searchForm" onsubmit="searchWord(); return false;">
+                <label for="wordInput">Enter a word:</label>
+                <input type="text" id="wordInput" placeholder="e.g. book">
+                <button type="submit">Search</button>
+                <!-- div block for definition to populate to -->
+                <div id="definition"></div>
+            </form>
+        </section>
+
+        <!-- Fact cards -->
+        <section id="word-facts">
+            <article class="fact-card">
+                <h2>Word of the Day</h2>
+                <p>zaftig</p>
+            </article>
+            <article class="fact-card">
+                <h2>Word of 2024</h2>
+                <p>polarization</p>
+            </article>
+            <article class="fact-card">
+                <h2>Trending Word</h2>
+                <p>nepo baby</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
